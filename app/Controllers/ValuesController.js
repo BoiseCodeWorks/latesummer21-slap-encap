@@ -18,12 +18,15 @@ function _draw() {
 //Public
 export default class ValuesController {
   constructor() {
-    ProxyState.on("values", _draw);
+    // NOTE this we will go over tomorrow
+    // ProxyState.on("values", _draw);
     _draw()
   }
 
   addValue() {
     valuesService.addValue()
+    _draw()
+
   }
 
 }
